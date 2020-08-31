@@ -1,0 +1,248 @@
+<!-- ---------------------------- Hero Section ----------------------------- -->
+<div class="relative">
+  <img class="z-0" src="/assets/images/hero.jpg" alt="Kapak Fotoğrafı" />
+  <div
+    class="left-0 md:absolute z-10 flex flex-col justify-center items-center"
+    style="bottom: 5%; max-width: 65%; min-width: 500px"
+  >
+    <div
+      class="px-12 xl:px-20 py-4 xl:py-8"
+      style="background: rgba(0, 0, 0, 0.5)"
+      *ngIf="!(isSmallScreen | async).matches"
+    >
+      <div class="text-white flex flex-col" style="width: 500px">
+        <h1>Dakik, güvenli, konforlu...</h1>
+        <p class="text-sm mt-4">
+          Müşterilerimize personel ve öğrenci servisi sektöründeki en iyi
+          hizmeti sağlayabilmek için sürekli olarak çalışıyoruz.
+        </p>
+        <button
+          (click)="scrollToSection.emit('end')"
+          class="self-end border-white hover:border-blue-800 border-solid border-2 px-4 xl:px-8 py-2 xl:py-4 mt-4 xl:mt-8 hover:bg-blue-800 focus:border-blue-800"
+        >
+          Müşterimiz olun
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="!(isSmallScreen | async).matches"
+    class="absolute right-0 bottom-0 text-xs pr-4 pb-2"
+    style="color: #ccc"
+  >
+    <span
+      >Photo by
+      <a
+        href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >Markus Winkler</a
+      >
+      on
+      <a
+        href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >Unsplash</a
+      ></span
+    >
+  </div>
+</div>
+
+<div class="container mx-auto mt-8 px-4 sm:px-0">
+  <!-- ---------------------- Hero Fallback for Mobile ----------------------- -->
+  <div class="flex flex-col my-8" *ngIf="(isSmallScreen | async).matches">
+    <h1 class="text-2xl font-bold">Dakik, güvenli, konforlu...</h1>
+    <p class="text-xs mt-4">
+      Müşterilerimize personel ve öğrenci servisi sektöründeki en iyi hizmeti
+      sağlayabilmek için sürekli olarak çalışıyoruz.
+    </p>
+    <button
+      (click)="scrollToSection.emit('end')"
+      class="self-center font-semibold text-blue-700 border-blue-700 border-solid border-2 px-4 py-2 mt-4 hover:bg-blue-700 hover:text-white focus:border-blue-700"
+    >
+      Müşterimiz olun
+    </button>
+  </div>
+
+  <!-- ----------------------------- Hakkımızda ------------------------------ -->
+  <div class="my-16">
+    <h1 id="hakkimizda" class="text-3xl text-center mb-4 mt-24">Hakkımızda</h1>
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-1/2 mb-8 md:px-8">
+        <h2>Vizyonumuz</h2>
+        <p>
+          En kaliteli hizmeti rakiplerimizden daha düşük ücretlere sağlayarak
+          yolcu taşımacılığı sektöründeki bir numaralı firma olmak ve daha geniş
+          bir ölçekte daha çok kişiye hizmetlerimizi aynı kalite ile ulaştırmak.
+        </p>
+      </div>
+      <div class="md:w-1/2 mb-8 md:px-8">
+        <h2>Misyonumuz</h2>
+        <p>
+          Personel ve öğrenci taşımacılığında her gün büyüyen modern araç filosu
+          ve işinde uzman çalışan kadrosu ile yolcularına güler yüzlü, dakik ve
+          güvenilir hizmeti en uygun maliyetle sunmak.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------------- Hizmetlerimiz ---------------------------- -->
+  <div class="my-16">
+    <h1 id="hizmet" class="text-3xl text-center mb-4 mt-24">Hizmetlerimiz</h1>
+    <div class="flex flex-col justify-around md:flex-row">
+      <div
+        class="md:w-1/3 w-full md:mx-4 my-4 rounded overflow-hidden shadow-md"
+      >
+        <img
+          class="w-full"
+          src="/assets/images/student.jpg"
+          alt="Sunset in the mountains"
+        />
+        <div class="my-8">
+          <div class="font-bold text-xl text-center">Öğrenci servisi</div>
+        </div>
+      </div>
+      <div
+        class="md:w-1/3 w-full md:mx-4 my-4 rounded overflow-hidden shadow-md"
+      >
+        <img
+          class="w-full"
+          src="/assets/images/staff.jpg"
+          alt="Sunset in the mountains"
+        />
+        <div class="my-8">
+          <div class="font-bold text-xl text-center">Personel taşımacılığı</div>
+        </div>
+      </div>
+      <div
+        class="md:w-1/3 w-full md:mx-4 my-4 rounded overflow-hidden shadow-md"
+      >
+        <img
+          class="w-full"
+          src="/assets/images/event.jpg"
+          alt="Sunset in the mountains"
+        />
+        <div class="my-8">
+          <div class="font-bold text-xl text-center">
+            Özel gün yolcu taşımacılığı
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------- Referanslarımız ------------------------------ -->
+  <div class="my-16">
+    <h1 id="referans" class="text-3xl text-center mb-4 mt-24">
+      Referanslarımız
+    </h1>
+    <div
+      class="flex flex-col justify-around items-center flex-wrap md:flex-row"
+    >
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_1.jpg"
+          alt="MEY"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_2.jpg"
+          alt="European Tobacco Türkiye"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_3.jpg"
+          alt="Doğa Enerji"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_4.png"
+          alt="FY Endüstri"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_5.png"
+          alt="PMS"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_6.png"
+          alt="Mersan"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_7.jpg"
+          alt="Şahin Grup"
+        />
+      </div>
+      <div>
+        <img
+          class="reference"
+          src="/assets/images/references/logo_8.jpg"
+          alt="Ekol Fide"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------ İletişim ------------------------------- -->
+  <div class="my-16">
+    <h1 id="iletisim" class="text-3xl text-center mb-4 mt-24">İletişim</h1>
+    <div class="flex flex-col md:flex-row justify-center items-center">
+      <div class="md:w-1/2 mb-8 md:px-8">
+        <h2 class="text-xl">Teklif almak için iletişime geçiniz.</h2>
+        <div class="flex flex-row my-8">
+          <img
+            style="max-width: 24px; max-height: 24px"
+            class="mr-4"
+            src="/assets/images/phone.svg"
+            alt="Telefon numarası"
+          /><a href="tel:+905325995205">+90 532 599 52 05</a>
+        </div>
+        <div class="flex flex-row my-8">
+          <img
+            style="max-width: 24px; max-height: 24px"
+            class="mr-4"
+            src="/assets/images/mail.svg"
+            alt="Email adres"
+          />
+          <a href="mailto:ergintasimacilik@gmail.com"
+            >ergintasimacilik@gmail.com</a
+          >
+        </div>
+        <div class="flex flex-row my-8">
+          <img
+            style="max-width: 24px; max-height: 24px"
+            class="mr-4"
+            src="/assets/images/pin.svg"
+            alt="Adres"
+          />
+          <p style="max-width: 400px">
+            Bahşiş Mah. İnönü Bulvarı Karaoğlanoğlu sokak No:68 Akdeniz / Mersin
+          </p>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7869.197667832068!2d34.81858006803467!3d36.88375153557451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527e78fd1cf1a61%3A0x16daf6010e9a5155!2zRXJnaW4gVGHFn8SxbWFjxLFsxLFr!5e0!3m2!1str!2str!4v1598886232237!5m2!1str!2str"
+        width="600"
+        height="450"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+  </div>
+</div>

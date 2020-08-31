@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+html body {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+}
+
+button:focus {
+  outline: 1px solid #35389541;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.bg-primary {
+  background-color: #353895;
+}
